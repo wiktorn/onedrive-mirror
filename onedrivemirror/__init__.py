@@ -27,7 +27,6 @@ class MirrorClient:
                     if item.e_tag != etags.get(item.id):
                         self.client.item(drive='me', id=item.id).download(os.path.join(local_path, item.name))
                         etags[item.id] = item.e_tag
-                print("{0}/{1} ({2})".format(item.parent_reference.path, item.name, item.id))
 
 
 def get_client() -> onedrivesdk.request.one_drive_client.OneDriveClient:
