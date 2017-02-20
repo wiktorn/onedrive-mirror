@@ -1,15 +1,15 @@
-from distutils.core import setup
+from setuptools import setup, find_packages
 
 setup(
-    name='onedrive-mirror',
+    name='onedrivemirror',
     version='0.1',
-    packages=['onedrivemirror'],
-    url='',
+    packages=find_packages(),
     license='MIT',
     author='w',
     author_email='',
     description='',
+    install_requires='onedrivesdk',
     entry_points= {
-            'console_scripts': ['onedrivemirror=onedrivemirror.__main__:main'],
+            'console_scripts': ['onedrivemirror = onedrivemirror.__main__:main'],
     }
 )
